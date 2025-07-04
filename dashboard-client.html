@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard - FundiFix</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-tools"></i>
+                    <span>FundiFix</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" onclick="showSection('overview')">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('findFundis')">
+                    <i class="fas fa-search"></i>
+                    <span>Find Fundis</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('bookings')">
+                    <i class="fas fa-calendar"></i>
+                    <span>My Bookings</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('credits')">
+                    <i class="fas fa-coins"></i>
+                    <span>Credits</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('profile')">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Back to Home</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1 id="welcomeMessage">Welcome to Your Dashboard</h1>
+                <div class="user-info">
+                    <div class="credits-display">
+                        <i class="fas fa-coins"></i>
+                        <span id="creditsCount">3 Credits</span>
+                    </div>
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Dashboard Overview -->
+                <div id="overviewSection" class="section-content">
+                    <div class="stats-grid">
+                        <div class="stat-card clickable" onclick="showSection('findFundis')">
+                            <div class="stat-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Find Fundis</h3>
+                                <p>Search for skilled professionals</p>
+                            </div>
+                        </div>
+                        <div class="stat-card clickable" onclick="showSection('bookings')">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="bookingCount">0 Bookings</h3>
+                                <p>Active appointments</p>
+                            </div>
+                        </div>
+                        <div class="stat-card clickable" onclick="showSection('credits')">
+                            <div class="stat-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>3 Credits</h3>
+                                <p>Available to use</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-section">
+                        <h2>Get Started</h2>
+                        <div class="activity-card">
+                            <div class="activity-content">
+                                <h3>🎉 Welcome to FundiFix!</h3>
+                                <p>You have 3 free credits to start connecting with fundis. Use them to:</p>
+                                <ul>
+                                    <li>Contact verified professionals</li>
+                                    <li>Get quotes for your projects</li>
+                                    <li>Book services through our WhatsApp bot</li>
+                                </ul>
+                                <button class="btn-primary" onclick="showSection('findFundis')">
+                                    <i class="fas fa-search"></i>
+                                    Find Fundis Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Find Fundis Section -->
+                <div id="findFundisSection" class="section-content" style="display: none;">
+                    <div class="section-header">
+                        <h2>Find Fundis</h2>
+                        <p>Search and connect with verified professionals</p>
+                    </div>
+                    
+                    <div class="search-filters">
+                        <div class="filter-row">
+                            <select id="serviceFilter" class="filter-select">
+                                <option value="">All Services</option>
+                                <option value="plumbing">Plumbing</option>
+                                <option value="electrical">Electrical</option>
+                                <option value="painting">Painting</option>
+                                <option value="carpentry">Carpentry</option>
+                                <option value="cleaning">Cleaning</option>
+                                <option value="gardening">Gardening</option>
+                                <option value="movers">Movers</option>
+                            </select>
+                            <select id="locationFilter" class="filter-select">
+                                <option value="">All Locations</option>
+                                <option value="nairobi">Nairobi</option>
+                                <option value="mombasa">Mombasa</option>
+                                <option value="kisumu">Kisumu</option>
+                                <option value="nakuru">Nakuru</option>
+                                <option value="eldoret">Eldoret</option>
+                                <option value="thika">Thika</option>
+                                <option value="machakos">Machakos</option>
+                                <option value="meru">Meru</option>
+                                <option value="nyeri">Nyeri</option>
+                                <option value="kitale">Kitale</option>
+                                <option value="garissa">Garissa</option>
+                                <option value="kakamega">Kakamega</option>
+                                <option value="malindi">Malindi</option>
+                                <option value="lamu">Lamu</option>
+                                <option value="isiolo">Isiolo</option>
+                                <option value="naivasha">Naivasha</option>
+                                <option value="kericho">Kericho</option>
+                                <option value="bomet">Bomet</option>
+                                <option value="embu">Embu</option>
+                                <option value="kitui">Kitui</option>
+                            </select>
+                            <button class="btn-search" onclick="searchFundis()">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="fundis-grid" id="fundisGrid">
+                        <!-- Fundis will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Bookings Section -->
+                <div id="bookingsSection" class="section-content" style="display: none;">
+                    <div class="section-header">
+                        <h2>My Bookings</h2>
+                        <p>Track your service appointments</p>
+                    </div>
+                    
+                    <div class="bookings-list" id="bookingsList">
+                        <div class="empty-state">
+                            <i class="fas fa-calendar-times"></i>
+                            <h3>No bookings yet</h3>
+                            <p>Start by finding and booking a fundi for your project</p>
+                            <button class="btn-primary" onclick="showSection('findFundis')">
+                                <i class="fas fa-search"></i>
+                                Find Fundis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Credits Section -->
+                <div id="creditsSection" class="section-content" style="display: none;">
+                    <div class="section-header">
+                        <h2>Credits & Billing</h2>
+                        <p>Manage your FundiFix credits</p>
+                    </div>
+                    
+                    <div class="credits-overview">
+                        <div class="credit-card">
+                            <div class="credit-balance">
+                                <i class="fas fa-coins"></i>
+                                <div class="balance-info">
+                                    <h3>3 Credits Available</h3>
+                                    <p>Each credit allows you to contact one fundi</p>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="buyCredits()">
+                                <i class="fas fa-plus"></i>
+                                Buy More Credits
+                            </button>
+                        </div>
+                        
+                        <div class="credit-history">
+                            <h3>Credit History</h3>
+                            <div class="history-item">
+                                <div class="history-icon welcome">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <div class="history-details">
+                                    <h4>Welcome Bonus</h4>
+                                    <p>3 free credits for joining FundiFix</p>
+                                </div>
+                                <div class="history-amount positive">
+                                    +3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Section -->
+                <div id="profileSection" class="section-content" style="display: none;">
+                    <div class="section-header">
+                        <h2>My Profile</h2>
+                        <p>Manage your account information</p>
+                    </div>
+                    
+                    <div class="profile-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="email" placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="phone" placeholder="254712345678">
+                        </div>
+                        <div class="form-group">
+                            <label>Location</label>
+                            <select id="location">
+                                <option value="">Select your city</option>
+                                <option value="nairobi">Nairobi</option>
+                                <option value="mombasa">Mombasa</option>
+                                <option value="kisumu">Kisumu</option>
+                                <option value="nakuru">Nakuru</option>
+                                <option value="eldoret">Eldoret</option>
+                                <option value="thika">Thika</option>
+                                <option value="machakos">Machakos</option>
+                                <option value="meru">Meru</option>
+                                <option value="nyeri">Nyeri</option>
+                                <option value="kitale">Kitale</option>
+                                <option value="garissa">Garissa</option>
+                                <option value="kakamega">Kakamega</option>
+                                <option value="malindi">Malindi</option>
+                                <option value="lamu">Lamu</option>
+                                <option value="isiolo">Isiolo</option>
+                                <option value="naivasha">Naivasha</option>
+                                <option value="kericho">Kericho</option>
+                                <option value="bomet">Bomet</option>
+                                <option value="embu">Embu</option>
+                                <option value="kitui">Kitui</option>
+                            </select>
+                        </div>
+                        <button class="btn-primary" onclick="updateProfile()">
+                            <i class="fas fa-save"></i>
+                            Update Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="demo-auth.js"></script>
+    <script src="dashboard-client.js"></script>
+</body>
+</html>
