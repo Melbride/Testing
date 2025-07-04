@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FundiFix - Find Skilled Fundis</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-tools"></i>
+                <span>FundiFix</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#fundis" class="nav-link">Find Fundis</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Find Your Perfect <span class="gradient-text">Fundi</span>
+                </h1>
+                <p class="hero-subtitle">Get 3 FREE credits to connect with verified professionals</p>
+                <div class="hero-buttons">
+                    <button class="cta-primary" onclick="openSignupModal()">
+                        <i class="fas fa-gift"></i>
+                        Get Started - 3 Free Credits
+                    </button>
+                    <button class="cta-secondary" onclick="scrollToServices()">
+                        <i class="fas fa-play"></i>
+                        Explore Services
+                    </button>
+                </div>
+                <div class="hero-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>No credit card required</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Connect in 2 minutes</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>500+ verified fundis</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="chat-interface">
+                            <div class="chat-header">
+                                <i class="fas fa-user-circle"></i>
+                                <span>FundiFix Bot</span>
+                            </div>
+                            <div class="chat-messages">
+                                <div class="message bot-message">
+                                    <p>Hi! What service do you need?</p>
+                                </div>
+                                <div class="message user-message">
+                                    <p>I need a plumber</p>
+                                </div>
+                                <div class="message bot-message">
+                                    <p>Great! Found 3 plumbers near you</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Professional services at your fingertips</p>
+            </div>
+            <div class="services-3d-grid">
+                <div class="service-3d-card" data-service="plumbing">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="service-icon-3d">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <h3>Plumbing</h3>
+                            <p>Professional plumbing solutions</p>
+                            <div class="service-features-mini">
+                                <span class="feature-dot">Pipe Repairs</span>
+                                <span class="feature-dot">Leak Fixing</span>
+                                <span class="feature-dot">Installation</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Plumbing Services</h3>
+                            <p>Professional water and drainage solutions for your home or business</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-3d-card" data-service="electrical">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="service-icon-3d">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Electrical</h3>
+                            <p>Safe and reliable electrical work</p>
+                            <div class="service-features-mini">
+                                <span class="feature-dot">Wiring</span>
+                                <span class="feature-dot">Repairs</span>
+                                <span class="feature-dot">Installation</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Electrical Services</h3>
+                            <p>Safe and certified electrical installations and repairs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-3d-card" data-service="painting">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="service-icon-3d">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3>Painting</h3>
+                            <p>Transform your space with color</p>
+                            <div class="service-features-mini">
+                                <span class="feature-dot">Interior</span>
+                                <span class="feature-dot">Exterior</span>
+                                <span class="feature-dot">Decorative</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Painting Services</h3>
+                            <p>Transform your space with professional painting services</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-3d-card" data-service="carpentry">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="service-icon-3d">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                            <h3>Carpentry</h3>
+                            <p>Custom woodwork and furniture</p>
+                            <div class="service-features-mini">
+                                <span class="feature-dot">Furniture</span>
+                                <span class="feature-dot">Doors</span>
+                                <span class="feature-dot">Custom Work</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Carpentry Services</h3>
+                            <p>Custom woodwork and furniture crafted by skilled artisans</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-3d-card" data-service="cleaning">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="service-icon-3d">
+                                <i class="fas fa-broom"></i>
+                            </div>
+                            <h3>Cleaning</h3>
+                            <p>Professional cleaning services</p>
+                            <div class="service-features-mini">
+                                <span class="feature-dot">Deep Clean</span>
+                                <span class="feature-dot">Regular</span>
+                                <span class="feature-dot">Office</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Cleaning Services</h3>
+                            <p>Comprehensive cleaning services for homes and offices</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-3d-card" data-service="gardening">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="service-icon-3d">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3>Gardening</h3>
+                            <p>Beautiful landscapes and maintenance</p>
+                            <div class="service-features-mini">
+                                <span class="feature-dot">Landscaping</span>
+                                <span class="feature-dot">Maintenance</span>
+                                <span class="feature-dot">Design</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Gardening Services</h3>
+                            <p>Beautiful landscaping and garden maintenance services</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-3d-card" data-service="movers">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="service-icon-3d">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h3>Movers</h3>
+                            <p>Professional moving services</p>
+                            <div class="service-features-mini">
+                                <span class="feature-dot">Home Moving</span>
+                                <span class="feature-dot">Office Moving</span>
+                                <span class="feature-dot">Packing</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Moving Services</h3>
+                            <p>Reliable moving and relocation services across Kenya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fundis Directory Section -->
+    <section id="fundis" class="fundis-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Available Fundis</h2>
+                <p class="section-subtitle">Connect with verified professionals</p>
+            </div>
+            <div class="login-required-message">
+                <div class="message-card">
+                    <div class="message-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Access Required</h3>
+                    <p>Login to your account to view and connect with available fundis or clients</p>
+                    
+                    <div class="login-buttons">
+                        <button class="btn-client-login" onclick="showLoginForm('client')">
+                            <i class="fas fa-user"></i>
+                            Client Login
+                        </button>
+                        <button class="btn-fundi-login" onclick="showLoginForm('fundi')">
+                            <i class="fas fa-tools"></i>
+                            Fundi Login
+                        </button>
+                    </div>
+                    
+                    <div class="signup-prompt">
+                        <p>Don't have an account? <a href="#" onclick="openSignupModal()" style="color: var(--primary-color); font-weight: 600;">Sign up here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Get connected with skilled fundis in 4 simple steps</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Sign Up & Get Credits</h3>
+                    <p>Create your account and receive 3 free credits to start connecting with fundis immediately</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Browse & Find</h3>
+                    <p>Search through our verified fundis by service type, location, and ratings to find the perfect match</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Book via Bot</h3>
+                    <p>Use your credits to book through our WhatsApp bot - it handles scheduling, pricing, and secure communication</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Get Job Done</h3>
+                    <p>Work with your chosen fundi to complete the project and rate your experience to help others</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header">
+                        <h2 class="section-title">About FundiFix</h2>
+                        <p class="section-subtitle">Revolutionizing how Kenya connects with skilled professionals</p>
+                    </div>
+                    
+                    <div class="about-description">
+                        <p class="lead-text">FundiFix is Kenya's premier platform that revolutionizes how you book skilled fundis through our intelligent WhatsApp bot system. Just like Bolt transformed transportation, we've transformed home services by ensuring secure, tracked, and guaranteed connections between clients and professionals.</p>
+                        
+                        <div class="platform-benefits">
+                            <div class="benefit-card">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h4>Smart Bot Booking</h4>
+                                <p>Our WhatsApp bot handles all bookings, ensuring secure transactions and service guarantees</p>
+                            </div>
+                            
+                            <div class="benefit-card">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-shield-check"></i>
+                                </div>
+                                <h4>Protected Transactions</h4>
+                                <p>All payments and communications go through our platform for your safety and peace of mind</p>
+                            </div>
+                            
+                            <div class="benefit-card">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <h4>24/7 Support</h4>
+                                <p>Our platform provides continuous support and dispute resolution throughout your service journey</p>
+                            </div>
+                        </div>
+                        
+                        <div class="platform-promise">
+                            <div class="promise-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="promise-content">
+                                <h3>The FundiFix Promise</h3>
+                                <p>Unlike traditional platforms that abandon you after contact exchange, FundiFix stays with you from booking to completion. Our bot manages scheduling, payments, and quality assurance - ensuring every job meets our standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Users Say</h2>
+                <p class="section-subtitle">Real stories from clients and fundis across Kenya</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card client-testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <span class="avatar-initial">S</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Mwangi</h4>
+                            <span class="user-type">Client - Nairobi</span>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"FundiFix saved me so much time! I found an excellent plumber within minutes. The 3 free credits got me started, and now I use it for all my home repairs."</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="service-used">Used for: Plumbing Repair</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fundi-testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <span class="avatar-initial">J</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>John Kamau</h4>
+                            <span class="user-type">Fundi - Electrician</span>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"FundiFix has transformed my business. I get quality leads daily and the credit system is fair. I've increased my income by 60% since joining!"</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="service-used">Specializes in: Electrical Work</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card client-testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <span class="avatar-initial">G</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Grace Achieng</h4>
+                            <span class="user-type">Client - Kisumu</span>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"The painters I found through FundiFix did an amazing job. Professional, affordable, and reliable. The platform makes it so easy to connect!"</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="service-used">Used for: House Painting</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fundi-testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <span class="avatar-initial">P</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Peter Ochieng</h4>
+                            <span class="user-type">Fundi - Carpenter</span>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"FundiFix connects me with serious clients who value quality work. No more time wasted on leads that don't convert. This platform is a game-changer!"</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="service-used">Specializes in: Custom Furniture</span>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content signup-modal">
+            <div class="modal-header">
+                <h2 id="signupModalTitle">Join FundiFix - Get 3 Free Credits!</h2>
+                <span class="close" onclick="closeSignupModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <!-- Step 1: User Type Selection -->
+                <div id="userTypeStep" class="signup-step active">
+                    <div class="step-header">
+                        <h3>I am a...</h3>
+                        <p>Choose your account type to get started</p>
+                    </div>
+                    <div class="user-type-options">
+                        <div class="user-type-card" onclick="selectUserType('client')">
+                            <div class="user-type-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h4>Client</h4>
+                            <p>I need services from fundis</p>
+                            <div class="user-type-benefits">
+                                <span>• Find verified fundis</span>
+                                <span>• Compare prices</span>
+                                <span>• Secure bot booking</span>
+                            </div>
+                        </div>
+                        <div class="user-type-card" onclick="selectUserType('fundi')">
+                            <div class="user-type-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h4>Fundi</h4>
+                            <p>I provide services to clients</p>
+                            <div class="user-type-benefits">
+                                <span>• Get quality leads</span>
+                                <span>• Set your rates</span>
+                                <span>• Build your reputation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Registration Form -->
+                <div id="registrationStep" class="signup-step">
+                    <div class="step-header">
+                        <h3>Create Your Account</h3>
+                        <p>Fill in your details to get 3 free credits</p>
+                    </div>
+                    <form id="signupForm" class="signup-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName"><i class="fas fa-user"></i> First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName"><i class="fas fa-user"></i> Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail"><i class="fas fa-envelope"></i> Email Address</label>
+                            <input type="email" id="signupEmail" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber"><i class="fas fa-phone"></i> Phone Number</label>
+                            <input type="tel" id="phoneNumber" name="phone" placeholder="254712345678" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupLocation"><i class="fas fa-map-marker-alt"></i> Your City</label>
+                            <select id="signupLocation" name="location" required>
+                                <option value="">Select your city</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Fundi-specific fields (hidden by default) -->
+                        <div id="fundiFields" class="fundi-specific-fields" style="display: none;">
+                            <div class="fundi-section-title">
+                                <i class="fas fa-tools"></i>
+                                <span>Fundi Details</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="serviceCategory"><i class="fas fa-tools"></i> Service You Offer</label>
+                                <select id="serviceCategory" name="serviceCategory">
+                                    <option value="">Select your service</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="hourlyRate"><i class="fas fa-money-bill-wave"></i> Your Hourly Rate (KSh)</label>
+                                <input type="number" id="hourlyRate" name="hourlyRate" placeholder="500" min="100" max="10000">
+                                <small class="form-help">Set your standard hourly rate (KSh 100 - 2,000)</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword"><i class="fas fa-lock"></i> Password</label>
+                            <div class="password-input-container">
+                                <input type="password" id="signupPassword" name="password" required>
+                                <button type="button" class="password-toggle" onclick="togglePassword('signupPassword')">
+                                    <i class="fas fa-eye-slash" id="signupPassword-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agreeTerms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-signup-submit">
+                            <i class="fas fa-gift"></i>
+                            Create Account & Get 3 Free Credits
+                        </button>
+                    </form>
+                    <div class="signup-footer">
+                        <p>Already have an account? <a href="#" onclick="switchToLogin()">Sign in</a></p>
+                    </div>
+                </div>
+
+                <!-- Step 3: Phone Verification -->
+                <div id="verificationStep" class="signup-step">
+                    <div class="step-header">
+                        <h3>Verify Your Phone</h3>
+                        <p>We've sent a verification code to <span id="phoneDisplay"></span></p>
+                    </div>
+                    <div class="verification-form">
+                        <div class="code-inputs">
+                            <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this, 0)">
+                            <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this, 1)">
+                            <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this, 2)">
+                            <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this, 3)">
+                            <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this, 4)">
+                            <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this, 5)">
+                        </div>
+                        <button class="btn-verify" onclick="verifyPhone()">
+                            <i class="fas fa-check"></i>
+                            Verify Phone Number
+                        </button>
+                        <p class="resend-text">Didn't receive code? <a href="#" onclick="resendCode()">Resend</a></p>
+                    </div>
+                </div>
+
+                <!-- Step 4: Welcome -->
+                <div id="welcomeStep" class="signup-step">
+                    <div class="welcome-content">
+                        <div class="welcome-icon">
+                            <i class="fas fa-party-horn"></i>
+                        </div>
+                        <h3>Welcome to FundiFix!</h3>
+                        <p>Your account has been created successfully</p>
+                        <div class="credits-awarded">
+                            <div class="credits-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h4>3 Free Credits Added!</h4>
+                            <p>You can now connect with fundis and start getting quotes</p>
+                        </div>
+                        <button class="btn-get-started" onclick="completeSignup()">
+                            <i class="fas fa-rocket"></i>
+                            Start Exploring
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content login-modal">
+            <div class="modal-header">
+                <h2 id="loginModalTitle">Welcome Back!</h2>
+                <span class="close" onclick="closeLoginModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm" class="login-form-modal">
+                    <div class="form-group">
+                        <label for="loginEmail"><i class="fas fa-envelope"></i> Email Address</label>
+                        <input type="email" id="loginEmail" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword"><i class="fas fa-lock"></i> Password</label>
+                        <div class="password-input-container">
+                            <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+                            <button type="button" class="password-toggle" onclick="togglePassword('loginPassword')">
+                                <i class="fas fa-eye-slash" id="loginPassword-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-login-submit">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span id="loginButtonText">Sign In</span>
+                    </button>
+                </form>
+                
+                <div class="login-footer">
+                    <p><a href="#" onclick="showForgotPassword()">Forgot your password?</a></p>
+                    <p>Don't have an account? <a href="#" onclick="switchToSignup()">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content login-modal">
+            <div class="modal-header">
+                <h2>Reset Password</h2>
+                <span class="close" onclick="closeForgotPasswordModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">Enter your email address and we'll send you a link to reset your password.</p>
+                
+                <form id="forgotPasswordForm" class="login-form-modal">
+                    <div class="form-group">
+                        <label for="resetEmail"><i class="fas fa-envelope"></i> Email Address</label>
+                        <input type="email" id="resetEmail" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <button type="submit" class="btn-login-submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Reset Link
+                    </button>
+                </form>
+                
+                <div class="login-footer">
+                    <p>Remember your password? <a href="#" onclick="backToLogin()">Back to login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-3d">
+        <!-- Floating Stats Section -->
+        <div class="floating-stats-section">
+            <div class="container">
+                <div class="floating-stats-grid">
+                    <div class="floating-stat-card">
+                        <div class="stat-3d-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">500+</h3>
+                            <p class="stat-title">Verified Fundis</p>
+                            <span class="stat-description">Skilled professionals ready to help</span>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-stat-card">
+                        <div class="stat-3d-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">1000+</h3>
+                            <p class="stat-title">Happy Clients</p>
+                            <span class="stat-description">Satisfied customers across Kenya</span>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-stat-card">
+                        <div class="stat-3d-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">8</h3>
+                            <p class="stat-title">Service Categories</p>
+                            <span class="stat-description">Complete home & office solutions</span>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-stat-card">
+                        <div class="stat-3d-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">24/7</h3>
+                            <p class="stat-title">Platform Access</p>
+                            <span class="stat-description">Always available when you need us</span>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-stat-card">
+                        <div class="stat-3d-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">Instant</h3>
+                            <p class="stat-title">Connection</p>
+                            <span class="stat-description">Connect with fundis in seconds</span>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-stat-card">
+                        <div class="stat-3d-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">Fair</h3>
+                            <p class="stat-title">Pricing</p>
+                            <span class="stat-description">No hidden fees or inflated costs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer Wave Section -->
+        <div class="footer-wave-section">
+            <div class="wave-background">
+                <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            
+            <div class="footer-main-content">
+                <div class="container">
+                    <div class="footer-3d-grid">
+                        <!-- Company Section -->
+                        <div class="footer-3d-section company-section">
+                            <div class="section-3d-card">
+                                <div class="company-logo-3d">
+                                    <div class="logo-icon-3d">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <h2 class="company-name">FundiFix</h2>
+                                </div>
+                                <p class="company-tagline">Connecting skills with needs across Kenya</p>
+                                
+                                <div class="mission-3d-card">
+                                    <div class="mission-icon">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <div class="mission-content">
+                                        <h4>Our Mission</h4>
+                                        <p>To bridge the gap between skilled professionals and those who need their services, creating opportunities for fundis while providing reliable, affordable solutions for every Kenyan home and business.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Section -->
+                        <div class="footer-3d-section contact-section">
+                            <div class="section-3d-card">
+                                <h3 class="section-title">
+                                    <i class="fas fa-headset"></i>
+                                    Get In Touch
+                                </h3>
+                                
+                                <div class="contact-3d-grid">
+                                    <div class="contact-3d-item">
+                                        <div class="contact-icon-3d">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <div class="contact-info">
+                                            <span class="contact-label">Call Us</span>
+                                            <span class="contact-value">+254 700 000 000</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-3d-item">
+                                        <div class="contact-icon-3d">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="contact-info">
+                                            <span class="contact-label">Email Us</span>
+                                            <span class="contact-value">info@fundifix.co.ke</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-3d-item">
+                                        <div class="contact-icon-3d">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </div>
+                                        <div class="contact-info">
+                                            <span class="contact-label">WhatsApp</span>
+                                            <span class="contact-value">+254 700 000 001</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Section Below Columns -->
+                    <div class="footer-social-section">
+                        <h4>Follow Our Journey</h4>
+                        <div class="social-3d-links">
+                            <a href="#" class="social-3d-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-3d-link twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-3d-link instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-3d-link whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom-3d">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="copyright-3d">
+                        <p>&copy; 2025 FundiFix. All rights reserved.</p>
+                    </div>
+                    <div class="trust-badges-3d">
+                        <div class="badge-3d trusted">
+                            <i class="fas fa-shield-check"></i>
+                            <span>Trusted Platform</span>
+                        </div>
+                        <div class="badge-3d quality">
+                            <i class="fas fa-star"></i>
+                            <span>Quality Service</span>
+                        </div>
+                        <div class="badge-3d kenya">
+                            <i class="fas fa-heart"></i>
+                            <span>Made in Kenya</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="demo-auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
